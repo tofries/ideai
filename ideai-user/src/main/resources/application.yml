@@ -1,0 +1,21 @@
+spring:
+  application:
+    name:ideai-user
+  datasource:
+    url: jdbc:mysql://forfries.com:3306/ideai?userUnicode=ture&characterEncoding=UTF-8&serverTimezone=UTC
+    username: fries
+    password: fries123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+wxlogin:
+  api-prefix: /wxlogin
+  verify-path: /wxverify
+  app-id: wx28e6c7a834051270
+  app-secret: 25e8e4d6fe8570bb1070f41da9999d1a
+  websocket:
+    enabled: true
+    path: /wxlogin
+
+logging:
+  level:
+    com.forfries.wxlogin : DEBUG

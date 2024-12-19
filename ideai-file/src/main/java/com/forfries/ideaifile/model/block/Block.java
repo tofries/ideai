@@ -18,6 +18,8 @@ public abstract class Block {
     
     private String type;
 
+    private String pageId;
+
     private String creatorId;   // 创建者ID
     
     private String lastEditorId;  // 最后编辑者ID
