@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ideai-ai
+    
+openai:
+  api-key: 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
+  api-url: https://api.openai.com/v1
+  model: gpt-4o
+  timeout: 60000
