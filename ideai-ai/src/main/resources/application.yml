@@ -1,9 +1,14 @@
 spring:
   application:
     name: ideai-ai
-    
-openai:
-  api-key: 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
-  api-url: https://api.openai.com/v1
-  model: gpt-4o
-  timeout: 60000
+
+ai:
+  deepseek:
+    api-key: sk-d5ac698b9239400da8f454c9797e871c
+    base-url: https://api.deepseek.com
+    model: deepseek-chat
+  dashscope:
+    api-key: sk-82afef5897b94056b5c6f7ac763003e9
+    base-url: https://dashscope.aliyuncs.com
+    model: wanx-v1
+    size: 1024*1024
