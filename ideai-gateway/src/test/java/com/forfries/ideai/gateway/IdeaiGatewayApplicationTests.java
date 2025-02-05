@@ -1,4 +1,4 @@
-package com.forfries.ideaigateway;
+package com.forfries.ideai.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

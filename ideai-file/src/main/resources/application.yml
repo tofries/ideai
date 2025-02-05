@@ -5,3 +5,9 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+  application:
+    name: ideai-file
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

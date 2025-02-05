@@ -1,11 +1,15 @@
 spring:
   application:
-    name:ideai-user
+    name: ideai-user
   datasource:
     url: jdbc:mysql://forfries.com:3306/ideai?userUnicode=ture&characterEncoding=UTF-8&serverTimezone=UTC
     username: fries
     password: fries123
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: forfries.com:8848
 
 wxlogin:
   api-prefix: /wxlogin
@@ -18,4 +22,4 @@ wxlogin:
 
 logging:
   level:
-    com.forfries.wxlogin : DEBUG
+    com.tofries.wxlogin : DEBUG

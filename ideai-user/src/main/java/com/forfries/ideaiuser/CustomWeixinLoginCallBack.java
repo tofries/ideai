@@ -2,8 +2,8 @@ package com.forfries.ideaiuser;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 
-import com.forfries.wxlogin.callback.WeixinLoginCallback;
-import com.forfries.wxlogin.websocket.WeixinWebSocketHandler;
+import com.tofries.wxlogin.callback.WeixinLoginCallback;
+import com.tofries.wxlogin.websocket.WeixinWebSocketHandler;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
