@@ -5,14 +5,13 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-
 ai:
-  deepseek:
-    api-key: sk-d5ac698b9239400da8f454c9797e871c
-    base-url: https://api.deepseek.com
-    model: deepseek-chat
-  dashscope:
-    api-key: sk-82afef5897b94056b5c6f7ac763003e9
-    base-url: https://dashscope.aliyuncs.com
-    model: wanx-v1
-    size: 1024*1024
+  chat:
+    deepseek:
+      api-key: sk-5HiuQCIsaYvmg2004c55855e92074cDb98DfC22a5144D344
+      model: DeepSeek-R1
+      base-url: https://api.tofries.com
+      max-token: 2000
+  
+
+

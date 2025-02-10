@@ -2,8 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/ideai-ai/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ideai-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ideai-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ideai-file/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ideai-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ideai-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ideai-test/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ideai-user/src/main/java" charset="UTF-8" />
   </component>
 </project>
