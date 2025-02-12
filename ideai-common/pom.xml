@@ -8,8 +8,12 @@
     <artifactId>ideai-common</artifactId>
     <version>1.0.0</version>
 
-    <properties>
-
-    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
+        </dependency>
+    </dependencies>
 
 </project>

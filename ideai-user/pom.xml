@@ -13,19 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>ideai-user</name>
     <description>ideai-user</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
@@ -33,6 +21,12 @@
         <mybatis-plus.version>3.5.2</mybatis-plus.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.tofries</groupId>
+            <artifactId>ideai-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

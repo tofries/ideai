@@ -4,10 +4,14 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.forfries.ideai.ai.config.AIConfig;
+import com.forfries.ideai.ai.enums.ResponseFormatType;
 import com.forfries.ideai.ai.model.request.AIRequest;
+import com.forfries.ideai.ai.model.request.ChatMessage;
+import com.forfries.ideai.ai.model.request.ChatRequest;
 import com.forfries.ideai.ai.model.response.AIResponse;
 import com.forfries.ideai.ai.model.response.StreamAIResponse;
 import lombok.AllArgsConstructor;
+import lombok.val;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.codec.ServerSentEvent;
@@ -35,16 +39,16 @@ public class StreamClient extends AIClient<StreamAIResponse, AIRequest> {
 
     @Override
     public StreamAIResponse generate(AIRequest request) {
-
-        String requestBody = String.format("""
-                        {
-                            "model": "%s",
-                            "messages": [{"role": "user", "content": "%s"}],
-                            "stream": true
-                        }
-                        """, properties.getModel(),
-                request.getUserMessage().replace("\"", "\\\""));
-
+        ChatRequest chatRequest = new ChatRequest(properties.getModel(),
+                request.getPrompt(),
+                request.getUserMessage(),
+                request.getResponseFormatType());
+        String requestBody;
+        try {
+            requestBody = mapper.writeValueAsString(chatRequest);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("JSON转换失败", e);
+        }
         StreamAIResponse response = new StreamAIResponse();
         Flux<String> responseFlux = webClient.post()
                 .uri("/v1/chat/completions")

@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/ideai-user/pom.xml" />
         <option value="$PROJECT_DIR$/ideai-common/pom.xml" />
         <option value="$PROJECT_DIR$/ideai-test/pom.xml" />
+        <option value="$PROJECT_DIR$/ideai-task/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,14 +1,13 @@
 package com.forfries.ideai.ai.model.request;
 
-import com.forfries.ideai.ai.model.TextBlock;
-import lombok.AllArgsConstructor;
+import com.forfries.ideai.ai.enums.ResponseFormatType;
+import lombok.Builder;
 import lombok.Data;
-import lombok.experimental.Accessors;
-
-import java.util.List;
 
 @Data
-@AllArgsConstructor
+@Builder
 public class AIRequest {
+    private String prompt;
     private String userMessage;
+    private ResponseFormatType responseFormatType;
 }

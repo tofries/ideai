@@ -1,7 +1,7 @@
 package com.forfries.ideai.ai.factory;
 
 import com.forfries.ideai.ai.enums.AIStrategyType;
-import com.forfries.ideai.ai.operation.chat.AbstractAIStrategy;
+import com.forfries.ideai.ai.strategy.AbstractAIStrategy;
 import org.springframework.stereotype.Component;
 
 import java.util.EnumMap;

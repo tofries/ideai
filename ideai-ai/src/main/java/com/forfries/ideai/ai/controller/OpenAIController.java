@@ -43,7 +43,7 @@ public class OpenAIController {
                 .retrieve()
                 .bodyToFlux(String.class)
                 .takeUntil(data -> data.contains("[DONE]")) // 遇到结束标记停止
-                .flatMap(this::parseSSEData)
+//                .flatMap(this::parseSSEData)
                 .map(content -> ServerSentEvent.builder(content).build())
                 .onErrorResume(e -> Flux.just(
                         ServerSentEvent.builder("[ERROR] " + e.getMessage()).build()
