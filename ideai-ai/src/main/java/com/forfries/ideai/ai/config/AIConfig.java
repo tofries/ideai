@@ -3,13 +3,9 @@ package com.forfries.ideai.ai.config;
 import com.forfries.ideai.ai.client.ImageClient;
 import com.forfries.ideai.ai.client.StreamClient;
 import com.forfries.ideai.ai.enums.ClientType;
-import com.forfries.ideai.ai.factory.ClientFactory;
+import com.forfries.ideai.ai.factory.AIClientFactory;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -42,8 +38,8 @@ public class AIConfig {
     }
 
     @Bean
-    public ClientFactory clientFactory() {
-        ClientFactory factory = new ClientFactory();
+    public AIClientFactory aiClientFactory() {
+        AIClientFactory factory = new AIClientFactory();
         this.getChat().forEach((clientId, properties) -> {
             factory.registerClient(ClientType.Chat,clientId,new StreamClient(properties));
         });

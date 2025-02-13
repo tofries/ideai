@@ -2,23 +2,19 @@ package com.forfries.ideai.ai.factory;
 
 
 import com.forfries.ideai.ai.client.AIClient;
-import com.forfries.ideai.ai.client.StreamClient;
-import com.forfries.ideai.ai.config.AIConfig;
 import com.forfries.ideai.ai.constant.ExceptionMessageConstant;
 import com.forfries.ideai.ai.enums.ClientType;
 import com.forfries.ideai.ai.exception.BusinessException;
 import com.forfries.ideai.ai.model.request.AIRequest;
 import com.forfries.ideai.ai.model.response.AIResponse;
-import jakarta.annotation.PostConstruct;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
-public class ClientFactory {
+
+public class AIClientFactory {
         private EnumMap<ClientType,Map<String, AIClient<? extends AIResponse, ? extends AIRequest>>> clients = new EnumMap<>(ClientType.class);
 
         private EnumMap<ClientType,String> defaultClients = new EnumMap<>(ClientType.class);

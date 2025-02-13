@@ -1,7 +1,7 @@
 package com.forfries.ideai.ai.constant;
 
-public class PromptConstant {
-    public static final String SCV_ECHARTS_PROMPT = """
+public class CSVEchartsPrompt implements Prompt{
+    private static final String SCV_ECHARTS_PROMPT = """
             [深度思考模式激活] 你是一个严谨的数据可视化专家，现在需要处理CSV数据和用户需求，生成标准的ECharts配置和数据分析报告。请按以下流程严格处理：
             
             **思考过程**
@@ -52,4 +52,22 @@ public class PromptConstant {
               }
             }
             """;
+
+    private static final String USER_MESSAGE= """
+            #DATA_START#
+            %s
+            #DATA_END#
+            
+            #PROMPT_START#
+            %s
+            #PROMPT_END#
+            """;
+
+    public static  String getPrompt() {
+        return SCV_ECHARTS_PROMPT;
+    }
+
+    public static String getUserMessage(String CSVData,String userSuggestion){
+        return String.format(USER_MESSAGE,CSVData,userSuggestion);
+    }
 }
