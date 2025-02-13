@@ -1,6 +1,7 @@
 package com.tofries.ideaitask.config;
 
 import com.tofries.ideai.common.model.Task;
+import com.tofries.ideai.common.model.TaskPayload;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -12,11 +13,12 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 public class RedisConfig {
 
     @Bean
-    public RedisTemplate<String, Task> redisTemplate(RedisConnectionFactory factory) {
-        RedisTemplate<String, Task> template = new RedisTemplate<>();
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(factory);
         template.setKeySerializer(new StringRedisSerializer());
-        template.setValueSerializer(new Jackson2JsonRedisSerializer<>(Task.class));
+        template.setValueSerializer(new Jackson2JsonRedisSerializer<>(Object.class));
+        template.setDefaultSerializer(new Jackson2JsonRedisSerializer<>(Object.class));
         return template;
     }
 }
