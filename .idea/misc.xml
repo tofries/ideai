@@ -11,7 +11,13 @@
         <option value="$PROJECT_DIR$/ideai-common/pom.xml" />
         <option value="$PROJECT_DIR$/ideai-test/pom.xml" />
         <option value="$PROJECT_DIR$/ideai-task/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/ideai-test/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="liberica-17" project-jdk-type="JavaSDK">
